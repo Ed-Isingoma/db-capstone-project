@@ -1,0 +1,1 @@
+select customerdetails.CustomerID, customerdetails.CustomerName, orders.OrderID, orders.TotalCost, menu.MenuName, menu.Cuisines, menu.Starters from customerdetails inner join bookings on customerdetails.CustomerID = bookings.CustomerID inner join orders on bookings.BookingID = orders.BookingID inner join menu on orders.MenuID = menu.MenuID;
